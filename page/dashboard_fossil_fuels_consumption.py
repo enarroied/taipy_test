@@ -9,6 +9,14 @@ lov_region = list(dataset_fossil_fuels_gdp.Entity.unique())
 
 
 def load_dataset(_country):
+    """Load dataset for a specific country.
+
+    Args:
+        _country (str): The name of the country.
+
+    Returns:
+        pandas.DataFrame: A DataFrame containing the fossil fuels GDP data for the specified country.
+    """
     dataset_fossil_fuels_gdp_cp = dataset_fossil_fuels_gdp.reset_index()
 
     dataset_fossil_fuels_gdp_cp = dataset_fossil_fuels_gdp_cp[
@@ -21,6 +29,14 @@ dataset_fossil_fuels_gdp_cp = load_dataset(country)
 
 
 def on_change_country(state):
+    """Update the dataset based on the selected country.
+
+    Args:
+        state (object): The "state" of the variables ran by the program (value changes through selectors)
+
+    Returns:
+        None
+    """
     print("country is:", state.country)
     _country = state.country
     dataset_fossil_fuels_gdp_cp = load_dataset(_country)

@@ -1,0 +1,14 @@
+[project]
+name = "taipy-test"
+version = "0.1.0"
+description = "A minimal taipy application using markdown format"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "taipy>=4.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.12.12",
+]

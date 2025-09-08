@@ -11,10 +11,11 @@ def on_change_country(state):
     Returns:
         None
     """
-    print("country is:", state.country)
-    _country = state.country
-    dataset_fossil_fuels_gdp_cp = load_dataset(_country, dataset_fossil_fuels_gdp)
-    state.dataset_fossil_fuels_gdp_cp = dataset_fossil_fuels_gdp_cp
+    with state as s:
+        print("country is:", s.country)
+        _country = s.country
+        dataset_fossil_fuels_gdp_cp = load_dataset(_country, dataset_fossil_fuels_gdp)
+        s.dataset_fossil_fuels_gdp_cp = dataset_fossil_fuels_gdp_cp
 
 
 page = """

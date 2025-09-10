@@ -7,7 +7,8 @@ def load_dataset(country, dataset_fossil_fuels_gdp):
     countries information.
 
     Returns:
-        pandas.DataFrame: A DataFrame containing the fossil fuels GDP data for the specified country.
+        pandas.DataFrame: A DataFrame containing the fossil fuels GDP data
+        for the specified country.
     """
     dataset_fossil_fuels_gdp_cp = dataset_fossil_fuels_gdp.copy().reset_index()
     return dataset_fossil_fuels_gdp_cp[dataset_fossil_fuels_gdp["Entity"] == country]

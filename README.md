@@ -9,6 +9,8 @@
   - [Medium Article](#medium-article)
   - [Data sources](#data-sources)
 
+> This version of the application uses Taipy's Python API. I prefer it, by far. Since I wrote a Medium article about it, using the Markdown API, I'll keep that version in the Master branch.
+
 ## What is this app?
 
 This is a minimal app using Taipy to test it.
